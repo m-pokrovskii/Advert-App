@@ -3,61 +3,69 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>New</title>
-		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-		<!-- build:css styles/vendor.css -->
-		<!-- bower:css -->
-		<!-- endbower -->
-		<!-- endbuild -->
 
 		<!-- build:css styles/main.css -->
 		<link rel="stylesheet" href="styles/main.css">
 		<!-- endbuild -->
-
 	</head>
 	<body>
-	<div class="app">
-		<div class="app__container">
-			<div class="app__top">
-				<div class="app__headline only-portrait">Discover this Free App!</div>
-				<div class="app__image-container">
+	<div class="ddd123_app">
+		<div class="ddd123_app__container">
+			<div class="ddd123_app__top">
+				<div class="ddd123_app__headline only-portrait"><span class="ddd123_app-headline__text">Discover this Free App!<br>Second Line</span></div>
+				<div class="ddd123_app__image-container">
 					<img src="images/temp_0.png" alt="">
 				</div>
 			</div>
-			<div class="app__bottom">
-				<div class="app__headline only-landscape">Discover this Free App!</div>
-				<div class="app__desc">
-					<div class="app-desc__title">King's Empire</div>
-					<div class="app-desc__desc">
+			<div class="ddd123_app__bottom">
+				<div class="ddd123_app__headline only-landscape">Discover this Free App!<br>Second Line</div>
+				<div class="ddd123_app__desc">
+					<div class="ddd123_app-desc__title">King's Empire</div>
+					<div class="ddd123_app-desc__desc">
 						Unite with players from around the world to vanquish enemies and conquer territory
 					</div>
-					<div class="app__button-container">
-						<a href="#" class="app__btn">Download Free!</a>
+					<div class="ddd123_app__button-container">
+						<a href="#" class="ddd123_app__btn">Download Free!</a>
 					</div>
 				</div>
 			</div>
-			<div class="app__footer">
-				<div class="app__powered-by">
-					<img src="images/m3.png" alt="">
-				</div>
-				<div class="app__skip">
-					<a class="app__skip-link" href="#">Skip</a>
+			<div class="ddd123_app__footer">
+				<div class="ddd123_app-footer__cell">
+					<div class="ddd123_app__powered-by">
+						<img src="images/m3.png" alt="">
+					</div>
+					<div class="ddd123_app__skip">
+						<a class="ddd123_app__skip-link" href="#">Skip</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	
-		<!-- build:js scripts/vendor.js -->
-		<!-- bower:js -->
-		<script src="../bower_components/jquery/dist/jquery.js"></script>
-		<!-- endbower -->
-		<!-- endbuild -->
-
-		<!-- build:js scripts/main.js -->
-			<script src="scripts/main.js"></script>
-		<!-- endbuild -->
 </body>
+
+<script type="text/javascript">
+	var Android_ID='61e63949-d69a-4268-8484-c9079341ceaf';
+	var iOS_ID='c75c15f7-6e39-4e0a-b253-99157ed19cec';
+	var Category='';
+	var Postback='';
+	var B_Title='';
+	var B_Color='';
+	var Skip_URL='http://google.com';
+	var App_Name='';
+	var Custom_Title='';
+	var Timeout='';
+	var Times_to_Show='';
+	var Times_to_Show_Reset='';
+
+	(function() {
+		var scrp = document.createElement('script');
+		scrp.type = 'text/javascript';
+		scrp.async = true;
+		// scrp.src = 'https://admin.appnext.com/welcomeweb/v2/js/script.js';
+		scrp.src = 'scripts/main.js';
+		document.head.appendChild(scrp);
+	})();
+</script>
 </html>

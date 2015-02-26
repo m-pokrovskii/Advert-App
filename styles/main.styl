@@ -1,21 +1,33 @@
 rupture.scale        = 0 400px 600px 800px 1050px 1800px
 rupture.scale-names = 'xs' 's' 'm' 'l' 'xl' 'hd'
+va()
+	position: relative;
+	top: 50%; 
+	transform: translateY(-50%);
+	
+// 
 
-.app 
+.ddd123_app 
 	position fixed
 	width 100%; height 100%  
 	top 0; left 0; right 0; bottom 0;
 	font-family Arial
 	font-size: 62.5%;
-
-.app * 
+	+above("l", orientation: landscape)
+		font-size: 85%;
+	+above("m", orientation: portrait)
+		font-size 100%
+		
+.ddd123_app * 
 	box-sizing border-box
 	margin 0
 	padding 0  
+	
 
-.app__container
+.ddd123_app__container
+	position relative
 	height 100%
-	width 100%  
+	width 100% 
 	+above("s", orientation: landscape)
 		display table 
 		position: relative;
@@ -35,48 +47,63 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl' 'hd'
 	.only-landscape
 		display block
 
-.app__top
+.ddd123_app__top
 	position relative
-	height 65% 
+	height 65%
+	@media (min-height: 481px) and (orientation: portrait)
+		height 70%
+	+above("s", orientation: landscape)
+		display table-cell
+		width 50%
+		height 100% 
+
+.ddd123_app__bottom
+	position relative
+	height 30%
+	@media (min-height: 481px) and (orientation: portrait)
+		height 25%
 	+above("s", orientation: landscape)
 		display table-cell
 		width 50%
 		height 100% 
 		vertical-align middle
 
-.app__bottom
-	position relative
-	height 35%
-	+above("s", orientation: landscape)
-		display table-cell
-		width 50%
-		height 100% 
-		vertical-align middle
-
-.app__headline
+.ddd123_app__headline
 	font-size 1.5em; font-weight 700  
+	height 15%
+	padding 10px 10px 0 10px 
 	text-align center
-	padding 10px 0
+	+above("s", orientation: landscape)
+		font-size 1.8em
+		padding 0 10px
 	+above("m", orientation: landscape)
-		font-size 2.5em 
+		margin-bottom 5px
 	+above("m", orientation: portrait)
-		font-size 4em 
+		font-size 4em
+	+above("l", orientation: landscape)
+		font-size 2.3em
+	@media (min-height: 481px) and (orientation: portrait)
+		font-size 1.7em
+
+.ddd123_app-headline__text
+	display block
+	va()
 	
 
-.app__desc
-	padding 0 10px 
+.ddd123_app__desc
+	padding 0 10px
+	va()
 	+above("s", orientation: landscape)
 		display inline
-		position: relative;
-		top: 50%; 
-		transform: translateY(-50%);
 
-.app__image-container
+.ddd123_app__image-container
 	position relative
 	text-align center
-	margin 0 auto 10px auto
-	height 70%
+	margin 0 auto
+	padding 10px 0 10px 0 
+	height 85%
 	+above("s", orientation: landscape)
+		padding 0 
 		width 100% 
 		height 100%
 		margin 0 auto
@@ -89,82 +116,91 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl' 'hd'
 			height auto
 		
 				
-.app-desc__title
+.ddd123_app-desc__title
 	font-size 1.5em 
 	font-weight bold
 	white-space nowrap
 	text-align center
-	margin 0 0 5px 0
+	+above("s", orientation: landscape)
+		font-size 2.5em
 	+above("m", orientation: landscape)
-		font-size 2.5em 
+		font-size 2.5em
 	+above("m", orientation: portrait)
-		font-size 4em 
+		font-size 4em
 	+above("l", orientation: landscape)
-		font-size 4em 
-	
-.app-desc__desc
-	font-size 1.2em
+		font-size 3em
+	@media (min-height: 481px) and (orientation: portrait)
+		font-size 1.8em 
+
+.ddd123_app-desc__desc
+	font-size 1.3em
 	text-align center
 	margin-bottom 10px
 	padding 0 10px 
-	@media (min-height: 481px)
-		font-size 1.8em 
+	margin-top 10px 
+	margin-bottom 10px 
+	@media (min-height: 481px) and (orientation: portrait)
+		font-size 1.4em 
 	+above("m", orientation: landscape)
-		font-size 1.8em 
+		font-size 1.9em 
+		margin-bottom 20px
 	+above("m", orientation: portrait)
-		font-size 2.8em
 		margin-top 30px 
 		margin-bottom 30px 
 	+above("l", orientation: landscape)
-		font-size 3em 
 		margin 20px 0 
 		
-.app__button-container
+.ddd123_app__button-container
 	text-align center
 
-.app__btn
+.ddd123_app__btn
 	background: linear-gradient(to bottom,  rgba(244,217,17,1) 0%,rgba(246,183,18,1) 100%);
 	box-shadow: 0 2px 12px rgba(153, 153, 153, 0.5);
 	display inline-block
-	font-size 1.2em 
+	font-size 1.2em
+	font-weight bold 
 	text-decoration none
 	color #000
 	padding 3% 10%
 	@media (min-height: 481px)
 		font-size 2em 
+	+above("s", orientation: landscape)
+		font-size 1.8em
 	+above("m", orientation: landscape)
 		font-size 1.8em 
-	+above("m", orientation: portrait)
-		font-size 3em 
 	
-.app__footer 
-	position absolute; bottom 10px; padding 0 10px 
+.ddd123_app__footer 
+	height 5%
 	width 100%
+	padding 0 20px 5px 20px
 	+above("s", orientation: landscape)
+		position absolute
+		bottom 0px
+		left 50% 
 		width 50%
-		left 50%
-		padding 0 20px 
-	+above("m", orientation: portrait)
-		padding 0 20px 
-	
-.app__powered-by 
+		padding 0 20px
+		height auto
+		+above("m", orientation: landscape)
+			bottom 15px
+			
+.ddd123_app__powered-by 
 	float left
-	width 20%
+	width 15%
+	+above("s", orientation: landscape)
+		width 20% 
 	+above("m", orientation: portrait)
 		width 15% 
 	img 
 		width 100%
 	
-.app__skip
+.ddd123_app__skip
 	float right
 	
-.app__skip-link
+.ddd123_app__skip-link
 	color #a7a7a7
 	text-decoration none
 	font-size 1.2em 
+	+above("s", orientation: landscape)
+		font-size 1em 
 	+above("l", orientation: landscape)
-		font-size 2em 
-	+above("m", orientation: portrait)
-		font-size  2em
-	
-
+		font-size 1.4em
