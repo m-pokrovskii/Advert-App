@@ -9,6 +9,7 @@ va()
 	
 .app 
 	position fixed
+	border: solid 2px red; 
 	width 100%; height 100%
 	top 0; left 0; right 0; bottom 0;
 	font-family Arial
@@ -50,7 +51,7 @@ va()
 	width 100% 
 	height 100%
 	+above("s", orientation: landscape)
-		height auto 
+		height auto
 		va()
 
 .app__container
@@ -84,7 +85,7 @@ va()
 		display table-cell
 		width 50%
 		height 100%
-		padding 2% 0 
+		padding 3% 0 
 
 .app__bottom
 	position relative
@@ -95,7 +96,7 @@ va()
 		width 50%
 		height 100%
 		vertical-align bottom
-		padding 2%
+		padding 3%
 
 .app__footer 
 	height 5%
@@ -142,7 +143,8 @@ va()
 		height 100% 
 		+above("s", orientation: landscape)
 			display block
-			width 100%
+			width 90%
+			margin 0 auto 
 			height auto
 
 .app_desc__table
