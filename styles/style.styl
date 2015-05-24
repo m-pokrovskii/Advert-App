@@ -4,57 +4,73 @@ va()
 	position: relative;
 	top: 50%; 
 	transform: translateY(-50%);
-	
+		
 // 
 	
-.app 
-	position fixed
-	border: solid 2px red; 
-	width 100%; height 100%
-	top 0; left 0; right 0; bottom 0;
-	font-family Arial
-	font-size 62.5%
-	line-height 1.8em; 
-	background #fff
+html
+	font-size 62.5% !important
+	line-height 1.8em !important
+	font-family Arial !important
+	overflow hidden
 	+above("s", orientation: landscape)
-		font-size 62.5%
-		line-height 1.8em
+		font-size 62.5% !important
+		line-height 1.8em !important
 	+above("m", orientation: landscape)
-		font-size 80%
-		line-height 1.8em
+		font-size 80% !important
+		line-height 1.8em !important
 	+above("l", orientation: landscape)
-		font-size 120%
-		line-height 1.8em
+		font-size 120% !important
+		line-height 1.8em !important
 	+above("xl", orientation: landscape)
-		font-size 140%
-		line-height 1.8em
+		font-size 140% !important
+		line-height 1.8em !important
 	@media (max-height: 479px) and (orientation: portrait)
-		font-size 60%
-		line-height 1.5em;
-	@media (min-height: 568px) and (orientation: portrait)
-		font-size 70%
-		line-height 1.8em;
-	@media (min-height: 667px) and (orientation: portrait)
-		font-size 80%
-		line-height 1.8em;
-	@media (min-height: 1024px) and (orientation: portrait)
-		font-size 140%
-		line-height 1.8em;
-	
+		font-size 60% !important
+		line-height 1.5em !important
+	@media (min-height: 500px) and (orientation: portrait)
+		font-size 70% !important
+		line-height 1.8em !important
+	@media (min-height: 560px) and (orientation: portrait)
+		font-size 65% !important
+		line-height 1.7em !important
+	@media (min-height: 639px) and (orientation: portrait)
+		font-size 80% !important
+		line-height 1.8em !important
+	@media (min-height: 700px) and (orientation: portrait)
+		font-size 100% !important
+		line-height 1.8em !important
+	@media (min-height: 750px) and (orientation: portrait)
+		font-size 120% !important
+		line-height 1.8em !important
+	@media (min-height: 950px) and (orientation: portrait)
+		font-size 140% !important
+		line-height 1.8em !important
+
+body
+	font-size 1em !important
+	overflow hidden
+
+body, .ddd123-app
+	position fixed
+	z-index 2147483647
+	width 100%; height 100%
+	top 0; left 0; right 0; bottom 0;	
+	background #fff
+	color #000 !important 
 		
-.app * 
+.ddd123-app * 
 	box-sizing border-box
 	margin 0
 	padding 0  
 
-.app__wrapper
+.ddd123-app__wrapper
 	width 100% 
 	height 100%
 	+above("s", orientation: landscape)
 		height auto
 		va()
 
-.app__container
+.ddd123-app__container
 	position relative
 	height 100%
 	width 100% 
@@ -73,32 +89,30 @@ va()
 	.only-landscape
 		display block
 
-.app__content-wrapper
+.ddd123-app__content-wrapper
 	height 100% 
-	+above("s", orientation: landscape)
-		height 90%
 
-.app__top
+.ddd123-app__top
 	position relative
-	height 65%
+	height 62%
 	+above("s", orientation: landscape)
 		display table-cell
 		width 50%
 		height 100%
-		padding 3% 0 
+		padding 3.5% 0 3% 0 
 
-.app__bottom
+.ddd123-app__bottom
 	position relative
-	height 30%
+	height 33%
 	padding 1em
 	+above("s", orientation: landscape)
 		display table-cell
 		width 50%
 		height 100%
 		vertical-align bottom
-		padding 3%
+		padding 3.5% 2% 3% 2%
 
-.app__footer 
+.ddd123-app__footer 
 	height 5%
 	width 100%
 	padding 0 2em 0.5em 2em
@@ -108,7 +122,7 @@ va()
 		padding-left 0
 		margin-top -3% 
 
-.app__headline
+.ddd123-app__headline
 	font-size 1.5em; font-weight 700  
 	height 17%
 	text-align center
@@ -117,18 +131,18 @@ va()
 		padding 0 1em 
 		height 17%
 	
-.app-headline__text
+.ddd123-app__headline__text
 	display block
 	padding 0.4em 1em 0.4em 1em
 	va()
 	
 
-.app__desc
+.ddd123-app__desc
 	height 100%
 	+above("s", orientation: landscape)
-		height 78% 
+		height 78%
 
-.app__image-container
+.ddd123-app__image-container
 	position relative
 	text-align center
 	margin 0 auto
@@ -141,48 +155,66 @@ va()
 	img
 		width auto
 		height 100% 
+		display inline-block
 		+above("s", orientation: landscape)
 			display block
 			width 90%
 			margin 0 auto 
 			height auto
 
-.app_desc__table
-	va()
+.ddd123-app__app-desc__table
 	width 100%
+	height auto
+	margin-top -0.5em 
 	border-spacing 0
 	border-collapse collapse	
+	font-size 1em 
 	td
 		padding 0.5em 0
+		vertical-align top
+	+above("s", orientation: landscape)
+		position relative
+		top 0.5em
+		height auto
 		
 				
-.app-desc__title
+.ddd123-app__app-desc__title
 	font-size 1.5em 
 	font-weight bold
 	white-space nowrap
 	text-align center
+	margin-bottom 0.5em 
 	+above("s", orientation: landscape)
 		font-size 2em 
 
 
-.app-desc__desc
+.ddd123-app__app-desc__desc
 	font-size 1.3em
 	text-align center
+	width: 100%;
+	max-height: 3em;
+	max-width: 100%;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
 			
-.app__button-container
+.ddd123-app__button-container
 	text-align center
 
-.app__btn
+.ddd123-app__btn
 	background: linear-gradient(to bottom,  rgba(244,217,17,1) 0%,rgba(246,183,18,1) 100%);
 	box-shadow: 0 2px 12px rgba(153, 153, 153, 0.5);
 	display inline-block
-	font-size 1.5em
+	font-size 1.6em
 	font-weight bold 
 	text-decoration none
 	color #000
-	padding 0.5em 3em
-			
-.app__powered-by 
+	padding 1em 3em
+	+above("s", orientation: landscape)
+		font-size 1.5em
+		white-space nowrap
+				
+.ddd123-app__powered-by 
 	float left
 	width 15%
 	+above("s", orientation: landscape)
@@ -190,12 +222,14 @@ va()
 	img 
 		width 100%
 	
-.app__skip
+.ddd123-app__skip
 	float right
 	
-.app__skip-link
+.ddd123-app__skip-link
 	display block
 	color #a7a7a7
 	text-decoration none
-	font-size 1em 
+	font-size 1.2em 
 	line-height 1 !important 
+	padding 0.3em
+	margin-top -0.3em 
