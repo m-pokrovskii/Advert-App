@@ -1,2 +1,2 @@
 # Responsive HTML 5 Mobile Application with slider.
-![screenshot] (https://github.com/m-pokrovskii/New-Interstitial/blob/master/screenshot.png)
+![screenshot] (https://github.com/m-pokrovskii/Advert-App/blob/master/screenshot.png)
